@@ -1,6 +1,5 @@
 package rmi.conection;
 
-import javax.swing.text.html.HTMLDocument;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -24,7 +23,9 @@ public class Server {
     }
 
     private static void acertarHorarioServer() {
-        mediaMinutos = Math.round(somartorioMinuto / idURLClientes.size() + 1);
+        int size = idURLClientes.size() + 1;
+        System.out.println("Lista: " + size);
+        mediaMinutos = Math.round(somartorioMinuto / size);
         acerto = LocalTime.MIN.plus(Duration.ofMinutes(Math.abs(mediaMinutos)));
 
         if (mediaMinutos < 0) {
