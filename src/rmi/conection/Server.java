@@ -43,7 +43,7 @@ public class Server {
 
         //Meu horário atual
         Random random = new Random();
-        horaAtual = LocalTime.of(random.nextInt(25), random.nextInt(61));
+        horaAtual = LocalTime.of(random.nextInt(24), random.nextInt(60));
         System.out.println("Horário Server atual: " + horaAtual);
 
         //Array de clients
